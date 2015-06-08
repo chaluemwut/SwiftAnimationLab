@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let txt = UILabel()
+        txt.frame = CGRectMake(0, 50, 100, 20)
+        txt.text = "Hello World"
+        self.view.addSubview(txt)
+        UIView.animateWithDuration(2.0, animations: {
+            txt.center.x += 100
+        })
     }
 
     override func didReceiveMemoryWarning() {
