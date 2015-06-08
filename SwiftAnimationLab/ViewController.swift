@@ -16,12 +16,10 @@ class ViewController: UIViewController {
         txt.frame = CGRectMake(100, 100, 100, 20)
         txt.text = "Hello World"
         self.view.addSubview(txt)
-//        UIView.animateWithDuration(2.0, animations: {
-//            txt.center.x += 100
-//        })
         
-        UIView.animateWithDuration(2.0, delay: 0.3, options: nil, animations: {
-            txt.frame.origin.y += 50
+        UIView.animateWithDuration(2.0, delay: 0.3, options: nil , animations: {
+//            txt.frame.origin.y += 50
+            txt.transform = CGAffineTransformMakeRotation((180.0*CGFloat(M_PI))/180.0)
         }, completion: nil)
     }
 
