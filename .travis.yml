@@ -1,0 +1,11 @@
+x_image: beta-xcode6.3
+
+language: objective-c
+
+before_install:
+- brew update
+- if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+
+script:
+- xcodebuild -list
+- xcodebuild clean build -project SwiftAnimationLab.xcodeproj -scheme SwiftAnimationLab -configuration Debug
